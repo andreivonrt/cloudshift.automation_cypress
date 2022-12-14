@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "cypress": "^12.1.0"
+  },
+
+  "scripts": {
+    "test-uat-local": "npx cypress open --config-file uat.config.js --browser chrome"
+  }
+}
