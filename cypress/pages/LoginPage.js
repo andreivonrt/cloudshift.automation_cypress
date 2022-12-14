@@ -22,6 +22,9 @@ class LoginPage {
         cy.intercept('https://cloudshift.uat.digitalrecruiter.net/')
         cy.url().should('eq', Cypress.env('baseUrl'))
         this.elements.dashboardHeader().should('be.visible')
+       
+        cy.intercept('https://django-cloudrun-m4loxicpgq-pd.a.run.app/user/permissions/').as('load')
+            .wait("@load")
     }
 
     verifyLoginError = () => {

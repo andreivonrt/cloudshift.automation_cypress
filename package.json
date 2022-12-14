@@ -1,9 +1,10 @@
 {
   "devDependencies": {
-    "cypress": "^12.1.0"
+    "cypress": "^12.1.0",
+    "cypress-wait-until": "^1.7.2"
   },
-
   "scripts": {
-    "test-uat-local": "npx cypress open --config-file uat.config.js --browser chrome"
+    "test-uat-local": "npx cypress open --config-file uat.config.js --browser chrome",
+    "test-headless": "npx cypress run --record --key 823593ba-a8c8-483d-a42e-4a915304d609 --config-file uat.config.js --browser chrome"
   }
 }
